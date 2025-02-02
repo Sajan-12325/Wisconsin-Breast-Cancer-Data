@@ -28,3 +28,23 @@ NumPy
 Matplotlib
 Seaborn
 Scikit-learn
+
+
+DAY -2 AFTER MODIFICATION:
+
+
+Feature Scaling: Uses MinMaxScaler to normalize features.
+
+Train-Test Split: Splits data into training (70%) and testing (30%) sets.
+
+Model Training:
+
+Random Forest Classifier
+
+Decision Tree Classifier
+
+Hyperparameter tuning with GridSearchCV
+Feature Importance Analysis: Identifies key features influencing model predictions.
+
+The Model Predicts accuracy score, displays Confusion matrix, classification report using different models like Random Forest Classifier and Decision Tree Classifier.
+
