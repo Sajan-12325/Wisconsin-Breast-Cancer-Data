@@ -6,45 +6,51 @@ Breast Cancer Wisconsin Diagnostic Dataset Analysis
 Overview
 -----------
 This repository contains the analysis of the Breast Cancer Wisconsin Diagnostic Dataset. The dataset is used to diagnose breast cancer based on several features.
+
 Dataset
 ---------
 The dataset is obtained from the University of California, Irvine (UCI) Machine Learning Repository.
-It contains 569 instances, each described by 32 features.
+It contains 569 instances and 32 features, including tumor measurements derived from fine needle aspiration biopsies.
 
-The aim of this analysis is to diagnoses the tumor, the tumor is either malignant (M) or benign (B).
+The primary objective is to develop predictive models for accurate breast cancer diagnosis.
 
-Analysis
+Data Preprocessing and Exploratory Data Analysis
 ---------
 Data cleaning: Handling missing values and removing duplicates.
-Data preprocessing: Normalizing the data using StandardScaler.
+Data preprocessing: Converted categorical labels (benign and malignant) into numerical values (1 for malignant, 0 for benign).
+
+MinMaxScaler was used to normalize features, ensuring equal weight for all variables.
+
 Exploratory data analysis: Visualizing the distribution of features and correlation between them.
-Feature selection: Selecting relevant features for diagnosis.
 
 
-Libraries:
 
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Scikit-learn
-
-
-DAY -2 AFTER MODIFICATION:
-
-
-Feature Scaling: Uses MinMaxScaler to normalize features.
-
-Train-Test Split: Splits data into training (70%) and testing (30%) sets.
+Train-Test Split: Splits data into training (70%) and testing (30%) sets. Also performing cross validation to improve the model performance and to avoid overfitting
 
 Model Training:
 
-Random Forest Classifier
+I have used three different models to correctly classify the diagnosis Random Forest Classifier Decision Tree Classifier and also utilized Convolution Neural Network. 
 
-Decision Tree Classifier
+Then tested those models on unseen data Identifies key features influencing model predictions.
 
-Hyperparameter tuning with GridSearchCV
-Feature Importance Analysis: Identifies key features influencing model predictions.
+The Model Predicts accuracy score, displays Confusion matrix, classification report.
 
-The Model Predicts accuracy score, displays Confusion matrix, classification report using different models like Random Forest Classifier and Decision Tree Classifier.
+To optimize the Decision Tree Classifier, GridSearchCV was used to find the best hyperparameters and improve model performance.
+
+Random Forest is an ensemble learning method that improves accuracy and reduces overfitting. Also selected top 10 features to fit the model and test  to know how it works on the unseen data.
+
+A fully connected neural network was implemented for binary classification.
+Input Layer: 30 neurons (one for each feature).
+Hidden Layers: Two dense layers with 30 neurons each, using ReLU activation.
+Output Layer: A single neuron with sigmoid activation for binary classification.
+
+
+Model	        Accuracy Score
+Decision Tree		85.0%
+Random Forest		92.5%
+Neural Network (CNN)	94.1%
+
+
+
+
 
