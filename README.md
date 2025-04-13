@@ -50,6 +50,10 @@ Decision Tree		85.0%
 Random Forest		92.5%
 Neural Network (CNN)	94.1%
 
+#### Used early stopping and dropout to reduce over fitting
+
+Neural Network (CNN) - 0.950 ---- 95%
+
 
 
 
